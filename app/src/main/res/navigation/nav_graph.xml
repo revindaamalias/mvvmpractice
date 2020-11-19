@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.quizlatihan.screens.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_listClubFragment"
+            app:destination="@id/listClubFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listClubFragment"
+        android:name="com.example.quizlatihan.screens.clublist.ListClubFragment"
+        android:label="ListClubFragment" >
+        <action
+            android:id="@+id/action_listClubFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.quizlatihan.screens.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="club"
+            app:argType="com.example.quizlatihan.models.Club" />
+    </fragment>
+</navigation>
